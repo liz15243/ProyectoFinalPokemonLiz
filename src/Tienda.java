@@ -66,7 +66,7 @@ public class Tienda {
     }
 
 
-    public void mostrarDisponibles(){
+    public void mostrarDisponibles()    {
     System.out.println("Los objetos disponibles son: ");
     int indice =1;
     for(Objeto objeto:objetosDisponibles){

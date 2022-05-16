@@ -7,6 +7,11 @@ public class Pokebola extends Objeto {
         this.efectividad = efectividad;
     }
 
+    @Override
+    public void usar(Pokemon pokemon) {
+
+    }
+
     // Atrapar - retornar true/false
     // Revisar tipo pokebola
       // Si es PokebolaLegendario - 40 efectividad

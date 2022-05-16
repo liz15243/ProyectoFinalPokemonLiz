@@ -25,6 +25,11 @@ public class Pocion extends Objeto{
         this.efecto = efecto;
         this.duracion = duracion;
     }
+
+    @Override
+    public void usar(Pokemon pokemon) {
+
+    }
     // Usar
        // Si es curacion
          // Aumentar 20 hp

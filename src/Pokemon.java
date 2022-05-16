@@ -5,6 +5,8 @@ public class Pokemon {
     private boolean esLegendario;
     private String debilContra;
     private String fuerteContra;
+    private int fuerza;
+    private int velocidad;
 
     public String getTipo() {
         return tipo;
@@ -54,12 +56,30 @@ public class Pokemon {
         this.fuerteContra = fuerteContra;
     }
 
-    public Pokemon(String tipo, Habilidad habilidad, int hp, boolean esLegendario, String debilContra, String fuerteContra) {
+    public int getFuerza() {
+        return fuerza;
+    }
+
+    public void setFuerza(int fuerza) {
+        this.fuerza = fuerza;
+    }
+
+    public int getVelocidad() {
+        return velocidad;
+    }
+
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
+    }
+
+    public Pokemon(String tipo, Habilidad habilidad, int hp, boolean esLegendario, String debilContra, String fuerteContra, int fuerza, int velocidad) {
         this.tipo = tipo;
         this.habilidad = habilidad;
         this.hp = hp;
         this.esLegendario = esLegendario;
         this.debilContra = debilContra;
         this.fuerteContra = fuerteContra;
+        this.fuerza = fuerza;
+        this.velocidad = velocidad;
     }
 }
