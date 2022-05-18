@@ -48,6 +48,6 @@ public abstract class Objeto {
         this.tipo = tipo;
     }
 
-    public abstract void usar(Pokemon pokemon);
+    public abstract boolean usar(Pokemon pokemon);
 
 }

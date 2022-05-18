@@ -1,15 +1,11 @@
 import java.util.ArrayList;
 
 public class Entrenador extends Personaje{
-    // Region - String
-    // PokemonMascota - Pokemon
-    // Torneos ganados - Int
-    // Pokedex - ArrayList<Pokemon>
-    // Mochila - ArrayList<Objeto>
+
     private String region;
     private Pokemon PokemonMascota;
     private int torneosGanados;
-    private ArrayList<Pokemon> Pokedex;
+    private ArrayList<Pokemon> pokedex;
     private ArrayList<Objeto> Mochila;
 
     public String getRegion() {
@@ -37,11 +33,11 @@ public class Entrenador extends Personaje{
     }
 
     public ArrayList<Pokemon> getPokedex() {
-        return Pokedex;
+        return pokedex;
     }
 
     public void setPokedex(ArrayList<Pokemon> pokedex) {
-        Pokedex = pokedex;
+        pokedex = pokedex;
     }
 
     public ArrayList<Objeto> getMochila() {
@@ -52,20 +48,25 @@ public class Entrenador extends Personaje{
         Mochila = mochila;
     }
 
-    public Entrenador(String region, Pokemon pokemonMascota, int torneosGanados, ArrayList<Pokemon> pokedex, ArrayList<Objeto> mochila) {
+    public Entrenador(String nombre, int nivel, char genero, String region, Pokemon pokemonMascota, int torneosGanados, ArrayList<Pokemon> pokedex, ArrayList<Objeto> mochila) {
+        super(nombre, nivel, genero);
         this.region = region;
         PokemonMascota = pokemonMascota;
         this.torneosGanados = torneosGanados;
-        Pokedex = pokedex;
+        pokedex = pokedex;
         Mochila = mochila;
     }
 
-    // Pelear - abstracto
-       //  Escoger pokemon de Pokedex
-           // Si su HP es superior a 15
-            // Escoger 2 fuertes y 1 debil aleatoriamente
-           // Si no tiene fuertes, poner 3 aleaotorios
-       //  Llamar al metodo pelear del pokemon
-       //
 
+    @Override
+    public boolean pelear(Pokemon pokemonContrario) {
+        //escoger pokemones para pelear
+        ArrayList<Pokemon> parapelear = new ArrayList<>();
+       // mostrar pokedex
+        // el usuario escoge 3
+        // y esos 3 se agregan a paraPelea
+
+
+        return false;
+    }
 }
