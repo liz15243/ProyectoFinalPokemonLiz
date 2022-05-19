@@ -73,4 +73,8 @@ public class Pokemon {
         this.fuerteContra = fuerteContra;
         this.velocidad = velocidad;
     }
+
+    public boolean pelear(Pokemon pokemonContrario) {
+        return false;
+    }
 }
