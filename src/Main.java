@@ -1,16 +1,49 @@
 import java.util.ArrayList;
 
-public class Main {
+public class Main implements UtilidadesInterface{
+    static ArrayList<Habilidad> habilidades = new ArrayList<>();
+    static Habilidad habilidad = new Habilidad("Puño mortal","Lanza llamas",30);
+    static Habilidad habilidad2= new Habilidad("Baby Baby","Distrae el contrincante",50);
+    static  Habilidad habilidades3 = new Habilidad("Trueno","Baja la mitad de la vida",50);
+    static ArrayList<String> tiposPokemon;
+
     public static void main(String[] args) {
-        ArrayList<Objeto> paraTienda = new ArrayList<>();
-        Pocion pocion1 = new Pocion(30.5,2,"vida","vida","dar vida",10);
-        Pokebola pokeUltra = new Pokebola(50.5,15,"PokeUltra","Ultra", 99.5);
-        paraTienda.add(pocion1);
-        paraTienda.add(pokeUltra);
-        Tienda miTiendita = new Tienda("Mi tienda", paraTienda);
-        miTiendita.mostrarDisponibles();
-        System.out.println(miTiendita.usuarioComprar(30.3,1,0));
-        miTiendita.usuarioVender(pocion1,4);
+    habilidades.add(habilidad);
+    habilidades.add(habilidad2);
+    habilidades.add(habilidades3);
+
+    }
+    public void tiempo(){
+        long tiempoInicial= System.currentTimeMillis();
     }
 
+    @Override
+    public void tiempoJugado(long tiempoInicial, long tiempoFinal) {
+
+    }
+
+    @Override
+    public void mostrarMenu() {
+
+    }
+
+    @Override
+    public Pokemon crearPokemonAleatorio(Habilidad habilidad) {
+        return null;
+    }
+
+    @Override
+    public <T> T sacarAleatorio(ArrayList<T> arrayList) {
+        return null;
+    }
+
+    @Override
+    public String[] debilYfuerte(String tipo) {
+        return new String[0];
+    }
+
+    @Override
+    public String[] nombresPokemones(String tipo) {
+        return new String[0];
+    }
 }
