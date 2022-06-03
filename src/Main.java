@@ -46,4 +46,10 @@ public class Main implements UtilidadesInterface{
     public String[] nombresPokemones(String tipo) {
         return new String[0];
     }
+    Main main = new Main();
+    Pocion pocio1 = new Pocion(30,20,"Pocion vida","Vida","Vida",20);
+
+
+
+
 }

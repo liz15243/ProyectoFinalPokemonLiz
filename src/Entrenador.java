@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Entrenador extends Personaje{
@@ -83,7 +84,17 @@ public class Entrenador extends Personaje{
         Scanner leer = new Scanner(System.in);
         for(int i=0; i<3;i++){
             System.out.println("Ingresa el pokemon");
-            parapelear.add(pokedex.get(leer.nextInt()));
+            try {
+                int indice = leer.nextInt();
+                parapelear.add(pokedex.get(indice - 1));
+            }catch(InputMismatchException e){
+                System.out.println("Ingrese un numero");
+                leer.nextLine();
+                i--;
+            } catch (IndexOutOfBoundsException e) {
+                System.out.println("Ese pokemon no existe, ingrese uno ya existente");
+                i--;
+            }
         }
 
         int respuesta=0;
@@ -122,11 +133,17 @@ public class Entrenador extends Personaje{
                 return false;
             }
         }while(respuesta !=0);
-       // mostrar pokedex
-        // el usuario escoge 3
-        // y esos 3 se agregan a paraPelea
-
 
         return false;
+    }
+
+    public boolean tirarObjeto (int indice) {
+        try {
+            Mochila.remove(indice);
+            return true;
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Ese objeto no existe");
+            return false;
+        }
     }
 }
